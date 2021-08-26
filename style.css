@@ -1,0 +1,467 @@
+@import url("https://fonts.googleapis.com/css2?family=Caveat:wght@400;500;600;700&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: sans-serif;
+  font-family: 'Caveat', cursive;
+  scroll-behavior: smooth;
+}
+
+::-webkit-scrollbar {
+  width: 11px;
+}
+
+::-webkit-scrollbar-track {
+  background: #000;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #585858;
+  border-radius: 0.6em;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #8f8f8f;
+}
+
+.scrollTop {
+  position: fixed;
+  bottom: 0.5em;
+  right: 2em;
+  width: 4em;
+  height: 4em;
+  background: rgba(0, 0, 0, 0.534);
+  border-radius: 50%;
+  cursor: pointer;
+  color: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-size: 1.2;
+  visibility: hidden;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  opacity: 0;
+}
+
+.scrollTop.active {
+  visibility: visible;
+  opacity: 1;
+  bottom: 1.5em;
+}
+
+.loader {
+  position: fixed;
+  z-index: 99;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #fff;
+  opacity: 0.1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.loader.hidden {
+  -webkit-animation: fadeOut 1s;
+          animation: fadeOut 1s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+.loader img {
+  width: 30em;
+}
+
+@-webkit-keyframes fadeOut {
+  100% {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
+@keyframes fadeOut {
+  100% {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
+.nav {
+  width: 100%;
+  height: 5em;
+  background: #333849;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 0 7em;
+  position: fixed;
+  z-index: 99;
+  opacity: 0.98;
+}
+
+.nav a {
+  text-decoration: none;
+}
+
+.nav a h2 {
+  font-size: 1.7rem;
+  color: #fff;
+  font-weight: 900;
+}
+
+.nav .social i {
+  padding: 0 0.5em;
+  font-size: 1.2rem;
+  color: #fff;
+}
+
+.section {
+  height: 100vh;
+  width: 100%;
+  background: #444b61;
+}
+
+.section1 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0 3em;
+}
+
+.section1 .aboutMe {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.section1 .aboutMe h1 {
+  font-size: 4rem;
+  line-height: 1.4;
+  color: #fff;
+}
+
+.section1 .aboutMe .profileImage {
+  margin-left: 6em;
+  width: 30em;
+  height: 30em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.section1 .aboutMe .profileImage .photo {
+  background: #52a589;
+  background-position: center;
+  background-size: cover;
+  width: 30em;
+  height: 30em;
+  border-radius: 50%;
+  background-image: url(./pexels-photo-3791466.jpeg);
+}
+
+.section2 {
+  background: #ececec;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  padding: 3em 3em;
+}
+
+.section2 .top {
+  color: #000;
+}
+
+.section2 .top h2 {
+  font-size: 3.8rem;
+}
+
+.section2 .tools {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.section2 .tools p {
+  padding: .8em 1em;
+  background: #d4d4d4;
+  margin: 0 1.5em;
+  font-size: 1.8rem;
+  border-radius: 2px;
+  position: relative;
+  cursor: pointer;
+  -webkit-transition: 0.3s ease;
+  transition: 0.3s ease;
+}
+
+.section2 .tools p:hover span {
+  visibility: visible;
+  opacity: 0.7;
+}
+
+.section2 .tools p:hover {
+  -webkit-box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+          box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+  background: #c2c2c2;
+}
+
+.section2 .tools p span {
+  visibility: hidden;
+  background-color: #1a1a1a;
+  color: #fff;
+  text-align: left;
+  border-radius: 6px;
+  padding: 0.2em 1.5em;
+  position: absolute;
+  z-index: 1;
+  top: 120%;
+  left: 5%;
+  opacity: 0;
+  -webkit-transition: 0.4s ease;
+  transition: 0.4s ease;
+  font-size: 1.3rem;
+  line-height: 1.3;
+}
+
+.section2 .tools p span::after {
+  content: " ";
+  position: absolute;
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+  bottom: 99%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: #1a1a1a transparent transparent;
+}
+
+.section3 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 6em 0em;
+}
+
+.section3 .top {
+  color: #fff;
+}
+
+.section3 .top h2 {
+  font-size: 3rem;
+}
+
+.section3 .projects {
+  width: 75%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 0 8em;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.section3 .projects .proj1 {
+  -webkit-box-flex: 6;
+      -ms-flex: 6;
+          flex: 6;
+  background-image: url(./photoq.png);
+  background-position: center;
+  background-size: cover;
+  height: 80%;
+  position: relative;
+  -webkit-transition: 0.5s ease;
+  transition: 0.5s ease;
+  cursor: pointer;
+}
+
+.section3 .projects .proj1:hover .info {
+  opacity: 1;
+}
+
+.section3 .projects .proj1:hover {
+  opacity: 0.6;
+}
+
+.section3 .projects .proj1 .info {
+  -webkit-transition: .5s ease;
+  transition: .5s ease;
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.section3 .projects .proj1 .info .pop {
+  color: white;
+  font-size: 1rem;
+  padding: 1em 2em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.section3 .projects .proj1 .info .pop .link {
+  font-size: 2.2rem;
+  margin: 0 1em;
+  background: #131622;
+  padding: 0.6em;
+  border-radius: 1em;
+  width: 3em;
+  z-index: 200;
+  -webkit-transition: 0.3s ease;
+  transition: 0.3s ease;
+}
+
+.section3 .projects .proj1 .info .pop .link:hover {
+  background: #2a3353;
+}
+
+.section3 .projects .proj1 .info .pop .link a {
+  text-decoration: none;
+  color: #fff;
+}
+
+.section3 .projects .proj1 .info .pop .link a p {
+  font-size: 1rem;
+}
+
+.section3 .projects .proj2 {
+  -webkit-box-flex: 3;
+      -ms-flex: 3;
+          flex: 3;
+  background: #1d1d1d;
+  height: 80%;
+  padding: 1em;
+}
+
+.section3 .projects .proj2 h2 {
+  text-align: center;
+  line-height: 1.5;
+  color: #fff;
+  padding-bottom: 1em;
+  font-size: 2.1rem;
+}
+
+.section3 .projects .proj2 ul {
+  width: 100%;
+  height: 60%;
+  font-size: 1.5rem;
+  padding: 1em 2em;
+  line-height: 1.5;
+  color: #fff;
+}
+
+.section4 {
+  background: #ececec;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  padding-top: 5em;
+}
+
+.section4 .first {
+  background: #cecece;
+  width: 30%;
+  height: 70%;
+  text-align: center;
+  font-size: 1.5rem;
+  padding-top: 0.4em;
+  -webkit-transition: 0.4s ease;
+  transition: 0.4s ease;
+}
+
+.section4 .first:hover {
+  -webkit-box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+          box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+  background: #b6b6b6;
+}
+
+.section4 .first h1 {
+  letter-spacing: 2px;
+  border-bottom: 1.5px solid #acacac;
+  line-height: 1.8;
+  margin: 0 0.5em;
+}
+
+.section4 .first p {
+  margin: 1.5em 0 0;
+  font-size: 2.1rem;
+}
+
+.section4 .first p span {
+  font-size: 1.1rem;
+}
+/*# sourceMappingURL=style.css.map */
