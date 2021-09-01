@@ -1,7 +1,24 @@
+// NAVBAR START ///
+const navToggler = document.querySelector(".nav-toggler");
+navToggler.addEventListener("click", navToggle);
+
+function navToggle() {
+    navToggler.classList.toggle("active");
+    const nav = document.querySelector(".nav");
+    nav.classList.toggle("open");
+    if(nav.classList.contains("open")){
+        nav.style.maxHeight = nav.scrollHeight + "px";
+    }
+    else{
+        nav.removeAttribute("style");
+    }
+};
+// NAVBAR END ///
+
 //SCROLL UP START//
 window.addEventListener('scroll' , function(){
     var scroll =document.querySelector('.scrollTop');
-    scroll.classList.toggle("active", window.scrollY > 500)
+    scroll.classList.toggle("active", window.scrollY > 300)
 })
 
 function scrollToTop(){
@@ -10,7 +27,6 @@ function scrollToTop(){
     })
 }
 //SCROLL UP END//
-
 
 //LOADER START//
 window.addEventListener("load", function () {
