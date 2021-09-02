@@ -1,5 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,800;0,900;1,800;1,900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Oxygen+Mono&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@700&family=Knewave&display=swap');
 *{
     padding: 0;
     margin: 0;
@@ -85,7 +85,10 @@ body{
         font-size: 300%;
         color: #e0e0e0;
         font-family: 'Caveat', cursive;
+        font-family: "BPG DedaEna Nonblock", sans-serif;
+        font-weight: 100;
         animation: circleScale 1s infinite;
+        border-style: double;
     }
 }
 
@@ -110,6 +113,12 @@ body{
     }
     100% {
         transform: scale(1);
+    }
+}
+
+@media (max-width:425px){
+    .loader h1{
+        font-size: 200%;
     }
 }
 /// LOADER END ///
@@ -208,15 +217,14 @@ body{
     height: 93vh;
     .resume{
         background: #a5a5a5;
-        width: 3.3em;
-        height: 2.6em;
+        width: 3em;
+        height: 2.2em;
         position: fixed;
         bottom: 5em;
         border-radius: 0 .6em .6em 0;
         display: flex;
         align-items: center;
-        justify-content: center;
-        flex-direction: column;
+        justify-content: space-evenly;
         cursor: pointer;
         transition: 0.2s;
         color: #151515;
@@ -228,6 +236,7 @@ body{
         p{
             font-size: .7rem;
             font-family: 'Oxygen Mono', monospace;
+            font-weight: 600;
         }
         i{
             font-size: 1.1rem;
@@ -281,16 +290,42 @@ body{
         padding: 1em;
         display: flex;
         justify-content: center;
-        align-items: center;
+        align-items: flex-end;
         position: relative;
         h1{
             color: #f2f2f2;
             max-width: 20em;
-            font-size: 2rem;
+            font-size: 3rem;
             font-family: 'Oxygen Mono', monospace;
             position: absolute;
             top: 10%;
             left: 10%;
+        }
+        a {
+            text-decoration: none;
+            button{
+                width: 3.5em;
+                height: 3.5em;
+                color: #fff;
+                font-family: 'Oxygen Mono', monospace;
+                font-size: 1rem;
+                border: none;
+                background: none;
+                border: 1px solid rgba(175, 175, 175, 0.404);
+                cursor: pointer;
+                border-radius: 50%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                
+                &:hover{
+                    background: #333333;
+                }
+                i{
+                    font-size: 1.4rem;
+                    
+                }
+            }
         }
     }
     .bubbels{
@@ -393,8 +428,15 @@ body{
             transform: translateX(-200px);
         }
     } 
+    
 }
-
+@media(max-width:800px){
+        .section1 .about h1{
+            font-size: 1.9rem;
+            top: 5%;
+            left: 10%;
+        }
+    }
 
 
 .section2{
@@ -406,6 +448,7 @@ body{
     flex-direction: column;
     position: relative;
     overflow: hidden;
+    border-top: 1px solid rgba(175, 175, 175, 0.178);
     .top{
         color: #000;
         z-index: 1;
@@ -439,11 +482,11 @@ body{
             }
             span{
                 visibility: hidden;
-                background-color: rgb(26, 26, 26);
+                background-color: rgb(52, 52, 52);
                 color: #fff;
                 text-align: left;
                 border-radius: 6px;
-                padding: 0.2em 1.5em;
+                padding: 0.2em 1em;
                 position: absolute;
                 z-index: 1;
                 top: 120%;
@@ -452,6 +495,8 @@ body{
                 transition: 0.4s ease;
                 font-size: 1.3rem;
                 line-height: 1.3;
+                font-family: 'Oxygen Mono', monospace;
+                
             }
             span::after {
                 content: " ";
@@ -462,7 +507,7 @@ body{
                 margin-left: -5px;
                 border-width: 5px;
                 border-style: solid;
-                border-color: rgb(26, 26, 26) transparent transparent;
+                border-color: rgb(52, 52, 52) transparent transparent;
             }
         }    
     }
@@ -593,10 +638,114 @@ body{
 
 
 .section3{
-    background: rgb(109, 15, 15);
+    background: #151515;
     height: 100vh;
     width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-direction: column;
+    border-top: 1px solid rgba(175, 175, 175, 0.178);
+    .top{
+        
+        h2{
+            color: #fff;
+            font-family: 'Oxygen Mono', monospace;
+            font-size: 2.5em;
+        }
+    }
+    .project{
+        width: 35em;
+        height: 35em;
+        border: 1px solid rgba(175, 175, 175, 0.685);
+        display: flex;
+        flex-direction: column;
+        z-index: 1;
+        .photo{
+            flex: 10;
+            animation: mymove 3s infinite;
+            overflow: hidden;
+            @keyframes mymove {
+                5% {background-color: rgb(255, 125, 125);}
+                50% {background-color: rgb(246, 253, 143);}
+                100% {background-color: rgb(132, 255, 159);}
+                50% {background-color: rgb(111, 133, 255);}
+                0% {background-color: rgb(248, 129, 242);}
+            }
+            filter: brightness(0.9);
+            img{
+                width: 100%;
+                padding: 1em 0;
+                transition: 0.3s ease;
+                &:hover{
+                    transform: scale(1.1);
+                }
+            }
+        }
+        .info{
+            flex: 4;
+            border: 1px solid rgba(175, 175, 175, 0.685);
+            padding: .8em 2em 1em;
+            h3{
+                color: #f2f2f2;
+                font-size: 1.5rem;
+                font-family: 'Oxygen Mono', monospace;
+                margin-bottom: 1em;
+            }
+            p{
+                color: #f2f2f2;
+                font-size: 1rem;
+                font-family: 'Oxygen Mono', monospace;
+            }
+        }
+        .button{
+            flex: 1.5;
+            display: flex;
+            a {
+                flex: 1;
+                border: 1px solid rgba(175, 175, 175, 0.685);
+                transition: 0.2s;
+                &:hover{
+                    background: rgb(51, 51, 51);
+                }
+                button{
+                    font-family: 'Oxygen Mono', monospace;
+                    color: #f2f2f2;
+                    font-size: 1rem;
+                    border: none;
+                    background: none;
+                    width: 100%;
+                    height: 100%;
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+    #scroll-container {
+        overflow: hidden;
+        position: absolute;
+        z-index: 0;
+        width: 100%;
+    }
     
+    #scroll-text {
+        transform: translateX(100%);
+        animation: my-animation 10s linear infinite;
+        color: #3d3d3d38;
+        font-family: 'Work Sans', sans-serif;
+        font-size: 18rem;
+        font-weight: 900;
+        font-style: italic;
+    }
+    
+    @keyframes my-animation {
+        from {
+            transform: translateX(100%);
+        }
+        to {
+            transform: translateX(-100%);
+        }
+    }    
 }
 
 // RESPONSIVE SOCIAL SIDEBAR START /////  
@@ -624,6 +773,39 @@ body{
                 }
             }
         }
+    }
+    .section3 .project{
+        width: 28em;
+        .info{
+            flex: 7;
+        }
+    }
+    .section3 .top{
+        h2{
+            font-size: 2em;
+        }
+    }
+    .section2 .top{
+        h2{
+            font-size: 2em;
+        }
+    }
+}
+
+@media (max-width:510px){
+    .section3 .project{
+        width: 19em;
+        height: 32em;
+        .info{
+            flex: 11;
+            padding: .5em 0.5em 1em ;
+        }
+        .button{
+            flex: 3;
+        }
+    }
+    .section3 #scroll-container{
+        margin-top: 10em;
     }
 }
 // RESPONSIVE SOCIAL SIDEBAR END /////  
