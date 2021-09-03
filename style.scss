@@ -35,30 +35,30 @@ body{
 }
 /// SCROLLBAR END ///
 
-
-
 /// LOADER START ///
 .loader {
     position: fixed;
-    z-index: 105;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background: #020202;
+    background: #000;
     opacity: 1;
     display: flex;
     justify-content: center;
     align-items: center;
+    z-index: 5;
     h1{
-        font-size: 300%;
+        font-size: 250%;
         color: #e0e0e0;
         font-family: 'Caveat', cursive;
         font-family: "BPG DedaEna Nonblock", sans-serif;
         font-weight: 100;
         animation: circleScale 1s infinite;
         border-style: double;
-        padding: 0.1em;
+        padding: 0.2em;
+        z-index: 5;
+        background: #111111;
     }
 }
 
@@ -109,7 +109,6 @@ body{
         text-decoration: none;
         font-weight: 100;
         font-family: 'Oxygen Mono', monospace;
-
     }
     .nav{
         ul {
@@ -149,7 +148,7 @@ body{
 .section1{
     display: flex;
     width: 100%;
-    height: 93vh;
+    height: 92vh;
     z-index: 0;
     /// SCROLL TOP START ///
     .scrollTop {
@@ -550,7 +549,6 @@ body{
     }
 }
 
-
 .section3{
     height: 100vh;
     width: 100%;
@@ -662,6 +660,32 @@ body{
     }    
 }
 
+.section4{
+    height: 10vh;
+    width: 100%;
+    display: flex;
+    justify-content:space-evenly;
+    align-items: center;
+    z-index: 0;
+    background: rgb(15, 15, 15);
+    border-top: 1px solid rgba(175, 175, 175, 0.178);
+    .contact{
+        display: flex;
+        color: #f2f2f2;
+        align-items: center;
+        justify-content: center;
+        p{
+            font-family: 'Oxygen Mono', monospace;
+            font-size: .9rem;
+        }
+        i{
+            font-size: 1.3rem;
+            margin: 0 1em;
+        }
+        
+    }
+}
+
 // RESPONSIVE START /////  
 @media(max-width:800px){
     .section1 .about h1{
@@ -670,7 +694,6 @@ body{
         left: 10%;
     }
 }
-
 
 @media (max-width:768px){
     //RESPONSIVE SIDE LINKS START ///
@@ -816,6 +839,10 @@ body{
     .section3 #scroll-text {
         font-size: 11rem;
         font-weight: 800;
+    }
+    .section4 {
+        flex-direction: column;
+        height: 15vh;
     }
 }
 
