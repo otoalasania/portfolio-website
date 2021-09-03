@@ -66,7 +66,6 @@ body {
   font-weight: 100;
   -webkit-animation: circleScale 1s infinite;
           animation: circleScale 1s infinite;
-  border-style: double;
   padding: 0.2em;
   z-index: 5;
   background: #111111;
