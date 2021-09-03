@@ -10,12 +10,11 @@
 
 body{
     background: #151515;
-    font-family: 'Oxygen Mono', monospace;
 }
 
 /// MARKING COLOR START//
 ::selection {
-    background: #a18816;
+    background: #145864;
 }
 /// MARKING COLOR END//
 
@@ -23,10 +22,10 @@ body{
 /// SCROLLBAR START ///
 ::-webkit-scrollbar {
     width: 9px;
-    }
+}
 ::-webkit-scrollbar-track {
     background: #000;
-    }
+}
 ::-webkit-scrollbar-thumb {
     background: #4b4b4b;
     border-radius: 0.6em;
@@ -36,37 +35,7 @@ body{
 }
 /// SCROLLBAR END ///
 
-/// SCROLL TOP START ///
-.scrollTop {
-    position: fixed;
-    bottom: 0.5em;
-    right: 1.5em;
-    width: 3.5em;
-    height: 3.5em;
-    background: rgba(94, 94, 94, 0.534);
-    border-radius: 50%;
-    cursor: pointer;
-    color: #fff;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 1.2;
-    visibility: hidden;
-    transition: 0.5s;
-    opacity: 0;
-    z-index: 5;
-    &:hover{
-        color: #020202;
-        background: #a7a7a7;
-    }
-}
 
-.scrollTop.active {
-    visibility: visible;
-    opacity: 1;
-    bottom: 1.5em;
-}
-/// SCROLL TOP END ///
 
 /// LOADER START ///
 .loader {
@@ -89,6 +58,7 @@ body{
         font-weight: 100;
         animation: circleScale 1s infinite;
         border-style: double;
+        padding: 0.1em;
     }
 }
 
@@ -115,12 +85,6 @@ body{
         transform: scale(1);
     }
 }
-
-@media (max-width:425px){
-    .loader h1{
-        font-size: 200%;
-    }
-}
 /// LOADER END ///
 
 // NAVBAR START ////
@@ -138,6 +102,7 @@ body{
 .header{
 	padding: 0.4em 0;
 	line-height: 1.5;
+    z-index: 2;
     .logo a{
         font-size: 1.2rem;
         color: #f2f2f2;
@@ -181,40 +146,39 @@ body{
 }
 // NAVBAR END ////
 
-
-// RESPONSIVE NAVBAR START ///
-@media(max-width:768px){
-    .nav-toggler{
-        display: block;
-    }
-    .header .nav{
-        width: 100%;
-        max-height: 0px;
-        overflow: hidden;
-        transition: all 0.5s ease;
-    }
-    .header .nav.open{
-        visibility: visible;
-    }
-    .header .nav ul{
-        padding: 0 1.3em;
-        margin-top: 5px;
-        border-top: 1px solid rgba(190, 190, 190, 0.274);
-        border-bottom:1px solid rgba(190, 190, 190, 0.274);
-    }
-    .header .nav ul li{
-        display: block;
-        margin:0;
-    }
-}
-// RESPONSIVE NAVBAR END ///
-
-
-
 .section1{
     display: flex;
     width: 100%;
     height: 93vh;
+    z-index: 0;
+    /// SCROLL TOP START ///
+    .scrollTop {
+        position: fixed;
+        bottom: 0.5em;
+        right: 1.5em;
+        width: 3.5em;
+        height: 3.5em;
+        background: rgba(94, 94, 94, 0.534);
+        border-radius: 50%;
+        cursor: pointer;
+        color: #fff;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.2;
+        visibility: hidden;
+        transition: 0.5s;
+        opacity: 0;
+        z-index: 6;
+}
+
+.scrollTop.active {
+    visibility: visible;
+    opacity: 1;
+    bottom: 1.5em;
+    z-index: 6;
+}
+/// SCROLL TOP END ///
     .resume{
         background: #a5a5a5;
         width: 3em;
@@ -228,11 +192,7 @@ body{
         cursor: pointer;
         transition: 0.2s;
         color: #151515;
-        z-index: 4;
-        &:hover{
-            background: #4e4e4e;
-            color: #f2f2f2;
-        }
+        z-index: 6;
         p{
             font-size: .7rem;
             font-family: 'Oxygen Mono', monospace;
@@ -246,6 +206,7 @@ body{
         flex: 1;
         display: flex;
         align-items: center;
+        z-index: 2;
         .linksDiv{
             color: #f2f2f2;
             width: 100%;
@@ -267,22 +228,27 @@ body{
                     border-right: 1px solid #c0c0c077;
                 }
             }
-            i{
-                font-size: 1.1rem;
-                margin: 0.8em 0;
-                width: 1.5em;
-                height: 1.5em;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                border-radius: 50%;
-                transition: 0.3s ease;
-                cursor: pointer;
-                &:hover{
-                    border: 1px solid #bbbbbb;
-                    transform: rotate(360deg);
+            a{
+                text-decoration: none;
+                color: #f2f2f2;
+                i{
+                    font-size: 1.1rem;
+                    margin: 0.8em 0;
+                    width: 1.5em;
+                    height: 1.5em;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    border-radius: 50%;
+                    transition: 0.3s ease;
+                    cursor: pointer;
+                    &:hover{
+                        border: 1px solid #bbbbbb;
+                        transform: rotate(360deg);
+                    }
                 }
             }
+            
         }
     }
     .about{
@@ -298,7 +264,7 @@ body{
             font-size: 3rem;
             font-family: 'Oxygen Mono', monospace;
             position: absolute;
-            top: 10%;
+            top: 15%;
             left: 10%;
         }
         a {
@@ -307,7 +273,6 @@ body{
                 width: 3.5em;
                 height: 3.5em;
                 color: #fff;
-                font-family: 'Oxygen Mono', monospace;
                 font-size: 1rem;
                 border: none;
                 background: none;
@@ -332,10 +297,10 @@ body{
         position: absolute;
         width: 100%;
         height: 100%;
-        z-index: -1;
         overflow: hidden;
         top: 0;
         left: 0;
+        z-index: -2;
     }
     .bubble{
         position: absolute;
@@ -430,13 +395,6 @@ body{
     } 
     
 }
-@media(max-width:800px){
-        .section1 .about h1{
-            font-size: 1.9rem;
-            top: 5%;
-            left: 10%;
-        }
-    }
 
 
 .section2{
@@ -449,19 +407,15 @@ body{
     position: relative;
     overflow: hidden;
     border-top: 1px solid rgba(175, 175, 175, 0.178);
-    .top{
-        color: #000;
-        z-index: 1;
-        h2{
-            font-size: 2.5rem;
-            font-family: 'Oxygen Mono', monospace;
-            color: #fff;
-            text-align: center;
-        }
+    z-index: 0;
+    .top h2{
+        font-size: 2.5rem;
+        font-family: 'Oxygen Mono', monospace;
+        color: #fff;
+        text-align: center;
     }
     .tools{
         display: flex;
-        z-index: 4;
         p{
             padding: .8em 1em;
             margin: 0 1.5em;
@@ -496,7 +450,6 @@ body{
                 font-size: 1.3rem;
                 line-height: 1.3;
                 font-family: 'Oxygen Mono', monospace;
-                
             }
             span::after {
                 content: " ";
@@ -519,7 +472,7 @@ body{
         right: -40em;
         top: 50%;
         transform: translate3d(-50%, -50%, 0);
-        z-index: 3;
+        z-index: -2;
         .wheel {
             position: absolute;
             left: 0;
@@ -528,6 +481,7 @@ body{
             bottom: 0;
             border-radius: 50%;
             animation: ferri-wheel 15s linear infinite;
+
             .cabin {
                 width: 8rem;
                 height: 10rem;
@@ -539,7 +493,6 @@ body{
                 font-size: 2rem;
                 line-height: 10rem;
                 animation: cabin 15s linear infinite;
-                z-index: -2;
                 i{
                     color: rgba(255, 255, 255, 0.123);
                     font-size: 10rem;
@@ -598,47 +551,7 @@ body{
 }
 
 
-@media (max-width:768px){
-    .section2{
-        .tools{
-            flex-direction: column;
-            p{
-                margin: 1.5em 0;
-                padding: .8em 4em;
-                display: flex;
-                justify-content: center;
-            }
-        }
-    }
-
-    .section2 .wheel-wrapper {
-        right: -130%;
-        .wheel .cabin i{
-            font-size: 8rem;
-        }
-    }
-}
-@media (max-width: 560px){
-    .section2 .wheel-wrapper {
-        right: -220%;
-        .wheel .cabin i{
-            font-size: 7rem;
-        }
-    }
-}
-
-@media (max-width: 375px){
-    .section2 .wheel-wrapper {
-        right: -300%;
-        .wheel .cabin i{
-            font-size: 6rem;
-        }
-    }
-}
-
-
 .section3{
-    background: #151515;
     height: 100vh;
     width: 100%;
     display: flex;
@@ -646,6 +559,7 @@ body{
     justify-content: space-evenly;
     flex-direction: column;
     border-top: 1px solid rgba(175, 175, 175, 0.178);
+    z-index: 0;
     .top{
         
         h2{
@@ -660,11 +574,11 @@ body{
         border: 1px solid rgba(175, 175, 175, 0.685);
         display: flex;
         flex-direction: column;
-        z-index: 1;
         .photo{
             flex: 10;
             animation: mymove 3s infinite;
             overflow: hidden;
+            filter: brightness(0.9);
             @keyframes mymove {
                 5% {background-color: rgb(255, 125, 125);}
                 50% {background-color: rgb(246, 253, 143);}
@@ -672,7 +586,6 @@ body{
                 50% {background-color: rgb(111, 133, 255);}
                 0% {background-color: rgb(248, 129, 242);}
             }
-            filter: brightness(0.9);
             img{
                 width: 100%;
                 padding: 1em 0;
@@ -724,8 +637,9 @@ body{
     #scroll-container {
         overflow: hidden;
         position: absolute;
-        z-index: 0;
         width: 100%;
+        pointer-events: none;
+        z-index: -2;
     }
     
     #scroll-text {
@@ -748,8 +662,18 @@ body{
     }    
 }
 
-// RESPONSIVE SOCIAL SIDEBAR START /////  
+// RESPONSIVE START /////  
+@media(max-width:800px){
+    .section1 .about h1{
+        font-size: 1.9rem;
+        top: 5%;
+        left: 10%;
+    }
+}
+
+
 @media (max-width:768px){
+    //RESPONSIVE SIDE LINKS START ///
     .section1{
         flex-direction: column;
         .links{
@@ -757,10 +681,12 @@ body{
             .linksDiv{
                 flex-direction:row;
                 justify-content: center;
-                z-index: -1;
-                i{
+                a{
                     margin:0 1.3em;
-                    pointer-events: none;
+                    i{
+                        
+                        pointer-events: none;
+                    }
                 }
                 .forLine , .forLine2{
                     flex-direction: column;
@@ -774,6 +700,9 @@ body{
             }
         }
     }
+    //RESPONSIVE SIDE LINKS END ///
+
+    // RESPONSIVE SECTION 3 START //
     .section3 .project{
         width: 28em;
         .info{
@@ -785,9 +714,86 @@ body{
             font-size: 2em;
         }
     }
+    // RESPONSIVE SECTION 3 END //
+
+    // RESPONSIVE SECTION 2 START //
     .section2 .top{
         h2{
             font-size: 2em;
+        }
+    }
+
+    .section2{
+        .tools{
+            flex-direction: column;
+            p{
+                margin: 1.5em 0;
+                padding: .8em 4em;
+                display: flex;
+                justify-content: center;
+                &:hover {
+                    pointer-events: none;
+                }
+                &:hover span{
+                    visibility: hidden;
+                }
+            }
+        }
+    }
+    // RESPONSIVE SECTION 2 END //
+
+    // RESPONSIVE WHEEL START ///
+    .section2 .wheel-wrapper {
+        right: -130%;
+        .wheel .cabin i{
+            font-size: 8rem;
+        }
+    }
+    // RESPONSIVE WHEEL END ///
+    
+    /// SECTION1 DOWN BUTTON START ////
+    .section1 .about a button{
+        &:hover{
+            pointer-events: none;
+        }
+        i{
+            font-size: 1rem;
+        }
+    }
+    /// SECTION1 DOWN BUTTON END ////
+
+    // RESPONSIVE NAVBAR START ///
+    .nav-toggler{
+        display: block;
+    }
+    .header .nav{
+        width: 100%;
+        max-height: 0px;
+        overflow: hidden;
+        transition: all 0.5s ease;
+    }
+    .header .nav.open{
+        visibility: visible;
+    }
+    .header .nav ul{
+        padding: 0 1.3em;
+        margin-top: 5px;
+        border-top: 1px solid rgba(190, 190, 190, 0.274);
+        border-bottom:1px solid rgba(190, 190, 190, 0.274);
+    }
+    .header .nav ul li{
+        display: block;
+        margin:0;
+    }
+    // RESPONSIVE NAVBAR END ///
+}
+
+
+@media (max-width: 560px){
+    .section2 .wheel-wrapper {
+        right: -220%;
+        .wheel .cabin i{
+            font-size: 7rem;
         }
     }
 }
@@ -807,7 +813,29 @@ body{
     .section3 #scroll-container{
         margin-top: 10em;
     }
+    .section3 #scroll-text {
+        font-size: 11rem;
+        font-weight: 800;
+    }
 }
-// RESPONSIVE SOCIAL SIDEBAR END /////  
+
+
+@media (max-width:425px){
+    .loader h1{
+        font-size: 180%;
+    }
+}
+
+@media (max-width: 375px){
+    .section2 .wheel-wrapper {
+        right: -300%;
+        .wheel .cabin i{
+            font-size: 6rem;
+        }
+    }
+}
+
+// RESPONSIVE END ///// 
+
 
 
