@@ -580,7 +580,6 @@ body {
           flex-direction: column;
   position: relative;
   overflow: hidden;
-  border-top: 1px solid rgba(175, 175, 175, 0.178);
   z-index: 0;
 }
 
@@ -627,7 +626,7 @@ body {
   color: #fff;
   text-align: left;
   border-radius: 6px;
-  padding: 0.2em 1em;
+  padding: 0.2em 0.1em;
   position: absolute;
   z-index: 1;
   top: 120%;
@@ -770,7 +769,6 @@ body {
 }
 
 .section3 {
-  height: 100vh;
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -806,6 +804,7 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  margin: 2em;
 }
 
 .section3 .project .photo {
@@ -919,6 +918,54 @@ body {
   width: 100%;
   height: 100%;
   cursor: pointer;
+}
+
+.section3 .project2 {
+  position: relative;
+}
+
+.section3 .project2 .newLabel {
+  font-size: 5rem;
+  color: #fff;
+  position: absolute;
+  top: -9%;
+  left: 2%;
+  -webkit-animation: rotation 4s infinite linear;
+          animation: rotation 4s infinite linear;
+}
+
+@-webkit-keyframes rotation {
+  from {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(359deg);
+            transform: rotate(359deg);
+  }
+}
+
+@keyframes rotation {
+  from {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(359deg);
+            transform: rotate(359deg);
+  }
+}
+
+.section3 .project2 .newLabel-2 {
+  width: 20%;
+  height: 5%;
+  font-size: 1rem;
+  background: tomato;
+  color: #fff;
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 2;
 }
 
 .section3 #scroll-container {

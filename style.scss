@@ -437,7 +437,7 @@ body{
                 color: #fff;
                 text-align: left;
                 border-radius: 6px;
-                padding: 0.2em 1em;
+                padding: 0.2em 0.1em;
                 position: absolute;
                 z-index: 1;
                 top: 120%;
@@ -548,7 +548,7 @@ body{
 }
 
 .section3{
-    height: 100vh;
+    
     width: 100%;
     display: flex;
     align-items: center;
@@ -570,6 +570,7 @@ body{
         border: 1px solid rgba(175, 175, 175, 0.685);
         display: flex;
         flex-direction: column;
+        margin: 2em;
         .photo{
             flex: 10;
             animation: mymove 3s infinite;
@@ -627,6 +628,25 @@ body{
                     height: 100%;
                     cursor: pointer;
                 }
+            }
+        }
+    }
+    .project2{
+        position: relative;
+        .newLabel{
+            font-size: 5rem;
+            color: #fff;
+            position: absolute;
+            top: -9%;
+            left: 2%;
+            animation: rotation 4s infinite linear;
+        }
+        @keyframes rotation {
+            from {
+                transform: rotate(0deg);
+            }
+            to {
+                transform: rotate(359deg);
             }
         }
     }
