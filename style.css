@@ -956,18 +956,6 @@ body {
   }
 }
 
-.section3 .project2 .newLabel-2 {
-  width: 20%;
-  height: 5%;
-  font-size: 1rem;
-  background: tomato;
-  color: #fff;
-  position: absolute;
-  top: 0;
-  right: 0;
-  z-index: 2;
-}
-
 .section3 #scroll-container {
   overflow: hidden;
   position: absolute;
