@@ -641,6 +641,16 @@ body{
             left: 2%;
             animation: rotation 4s infinite linear;
         }
+        .photo {
+            p{
+                font-size: 2rem;
+                transform: translate(-50%,-50%);
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                font-weight: 600;
+            }
+        }
         @keyframes rotation {
             from {
                 transform: rotate(0deg);
