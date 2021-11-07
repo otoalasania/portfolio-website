@@ -415,7 +415,7 @@ body{
         display: flex;
         p{
             padding: .8em 1em;
-            margin: 0 1.5em;
+            margin: 0 1em;
             font-size: 1.2rem;
             position: relative;
             cursor: pointer;
@@ -548,7 +548,6 @@ body{
 }
 
 .section3{
-    
     width: 100%;
     display: flex;
     align-items: center;
@@ -557,7 +556,6 @@ body{
     border-top: 1px solid rgba(175, 175, 175, 0.178);
     z-index: 0;
     .top{
-        
         h2{
             color: #fff;
             font-family: 'Oxygen Mono', monospace;
@@ -582,6 +580,15 @@ body{
                 100% {background-color: rgb(132, 255, 159);}
                 50% {background-color: rgb(111, 133, 255);}
                 0% {background-color: rgb(248, 129, 242);}
+            }
+            h4{
+                position: absolute;
+                top: 0;
+                right: 0;
+                background: #333;
+                color: #f2f2f2;
+                font-weight: 400;
+                padding: 1px 5px;
             }
             img{
                 width: 100%;
@@ -723,6 +730,28 @@ body{
     }
 }
 
+@media(max-width:887px){
+    .section2{
+    .tools{
+        flex-direction: column;
+        p{
+            margin: 1.5em 0;
+            padding: .8em 4em;
+            display: flex;
+            justify-content: center;
+            &:hover {
+                pointer-events: none;
+            }
+            &:hover span{
+                visibility: hidden;
+            }
+        }
+    }
+}
+}
+
+
+
 @media (max-width:768px){
     //RESPONSIVE SIDE LINKS START ///
     .section1{
@@ -774,23 +803,6 @@ body{
         }
     }
 
-    .section2{
-        .tools{
-            flex-direction: column;
-            p{
-                margin: 1.5em 0;
-                padding: .8em 4em;
-                display: flex;
-                justify-content: center;
-                &:hover {
-                    pointer-events: none;
-                }
-                &:hover span{
-                    visibility: hidden;
-                }
-            }
-        }
-    }
     // RESPONSIVE SECTION 2 END //
 
     // RESPONSIVE WHEEL START ///
