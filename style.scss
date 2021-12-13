@@ -265,6 +265,15 @@ body{
             top: 15%;
             left: 10%;
         }
+        #myPhoto{
+            z-index: -2;
+            position: absolute;
+            right: 0;
+            top: 0;
+            height: 100%;
+            border-radius: 50% 0 0 50%;
+            filter: saturate(0) brightness(0.7);
+        }
         a {
             text-decoration: none;
             button{
@@ -724,7 +733,7 @@ body{
 // RESPONSIVE START /////  
 @media(max-width:800px){
     .section1 .about h1{
-        font-size: 1.9rem;
+        font-size: 1.7rem;
         top: 5%;
         left: 10%;
     }

@@ -377,6 +377,17 @@ body {
   left: 10%;
 }
 
+.section1 .about #myPhoto {
+  z-index: -2;
+  position: absolute;
+  right: 0;
+  top: 0;
+  height: 100%;
+  border-radius: 50% 0 0 50%;
+  -webkit-filter: saturate(0) brightness(0.7);
+          filter: saturate(0) brightness(0.7);
+}
+
 .section1 .about a {
   text-decoration: none;
 }
@@ -1060,7 +1071,7 @@ body {
 
 @media (max-width: 800px) {
   .section1 .about h1 {
-    font-size: 1.9rem;
+    font-size: 1.7rem;
     top: 5%;
     left: 10%;
   }
