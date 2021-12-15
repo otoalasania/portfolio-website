@@ -34,3 +34,16 @@ window.addEventListener("load", function () {
     loader.className += " hidden"; 
 });
 //LOADER END//
+
+const modal = document.getElementById("modal");
+const closeModal = document.getElementById("modalClose")
+
+window.onload = function() {
+    setTimeout(function(){
+        modal.style.display = "block";
+    }, 4000)
+}
+
+closeModal.addEventListener("click", () => {
+    modal.style.display = "none";
+});
