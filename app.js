@@ -41,7 +41,7 @@ const closeModal = document.getElementById("modalClose")
 window.onload = function() {
     setTimeout(function(){
         modal.style.display = "flex";
-    }, 4000)
+    }, 6000)
 }
 
 closeModal.addEventListener("click", () => {
