@@ -77,6 +77,13 @@ body {
   width: 100px;
 }
 
+@media screen and (max-width: 500px) {
+  #modal img {
+    width: 50px;
+    margin-top: 5px;
+  }
+}
+
 #modal .modalCenter p {
   margin-bottom: 5px;
   font-size: 1rem;
