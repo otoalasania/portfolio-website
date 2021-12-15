@@ -80,7 +80,7 @@ body {
 @media screen and (max-width: 500px) {
   #modal img {
     width: 50px;
-    margin-top: 5px;
+    margin-top: 10px;
   }
 }
 
