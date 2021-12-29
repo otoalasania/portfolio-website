@@ -50,7 +50,7 @@ closeModal.addEventListener("click", () => {
 
 
 const countdown = () => {
-    const countDate = new Date('Dec 31, 2021 00:00:00').getTime();
+    const countDate = new Date('Jan 1, 2022 00:00:00').getTime();
     const now = new Date().getTime();
     const gap = countDate - now;
 
