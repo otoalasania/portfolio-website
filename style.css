@@ -43,7 +43,7 @@ body {
   position: fixed;
   background: rgba(255, 255, 255, 0.671);
   width: 100%;
-  height: 14vh;
+  height: 16vh;
   left: 0;
   bottom: 0;
   z-index: 1001;
@@ -71,6 +71,16 @@ body {
   right: 12px;
   font-size: 1.6rem;
   cursor: pointer;
+}
+
+#modal h3 {
+  font-family: 'Oxygen Mono', monospace;
+  font-size: 1em;
+}
+
+#modal h3 span {
+  -webkit-animation: mymove 3s infinite;
+          animation: mymove 3s infinite;
 }
 
 #modal img {
